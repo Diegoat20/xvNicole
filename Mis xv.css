@@ -1,0 +1,151 @@
+body {
+    margin: 0;
+    font-family: 'Cinzel', serif;
+    /* YA NO ES BLANCO: Ahora es un degradado de oro pálido a oro medio */
+    background: linear-gradient(180deg, #f2e4b8 0%, #dab56a 100%);
+    /* Como el fondo es más oscuro, usamos un gris muy oscuro para el texto para buen contraste */
+    color: #242424;
+    text-align: center;
+    min-height: 100vh; /* Asegura que el dorado cubra toda la altura */
+}
+
+/* PORTADA */
+.hero {
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 0%, transparent 65%);
+}
+
+.titulo {
+    font-family: 'Great Vibes', cursive;
+    font-size: 4.5rem;
+    color: #1a1a1a;
+    text-shadow: 0 1px 3px rgba(255, 255, 255, 0.4);
+}
+
+.subtitulo {
+    color: #333;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-size: 0.95rem;
+}
+
+/* CONTENEDORES */
+.contenedorPrincipal {
+    width: 90%;
+    max-width: 950px;
+    margin: auto;
+}
+
+.caja {
+    /* Hacemos la caja más brillante que el fondo para que resalte (Efecto Placa de Oro) */
+    background: linear-gradient(145deg, #fffceb 0%, #f4e2a8 60%, #e6cd83 100%);
+    
+    /* Borde más oscuro para definir la caja */
+    border: 1px solid #b89848;
+    border-radius: 16px;
+    padding: 30px;
+    margin: 22px 0;
+    transition: 0.35s;
+    
+    /* Sombra más marcada porque el fondo ya no es blanco */
+    box-shadow: 0 8px 20px rgba(122, 98, 40, 0.25);
+}
+
+.caja:hover {
+    box-shadow: 0 12px 28px rgba(122, 98, 40, 0.45);
+    transform: translateY(-4px);
+    border-color: #94762c;
+}
+
+/* BOTONES */
+.boton,
+.confirmacion,
+#controlMusica {
+    /* Un dorado más cobrizo/intenso para que destaque sobre el fondo dorado */
+    background: linear-gradient(to bottom, #d4af37 0%, #aa8616 100%);
+    color: #ffffff;
+    padding: 12px 30px;
+    border-radius: 50px;
+    border: 1px solid #9e7d15;
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 15px;
+    transition: 0.3s;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.boton:hover,
+.confirmacion:hover,
+#controlMusica:hover {
+    background: linear-gradient(to bottom, #eac54e 0%, #c49a1b 100%);
+    box-shadow: 0 5px 15px rgba(139, 108, 17, 0.5);
+}
+
+/* REGALOS */
+.pantallaRegalos {
+    display: none;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    /* Mismo fondo dorado que el body */
+    background: linear-gradient(180deg, #f2e4b8 0%, #dab56a 100%);
+}
+
+.regaloCaja {
+    max-width: 600px;
+}
+
+/* BOTÓN MÚSICA */
+#controlMusica {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 100;
+}
+/* CONTENEDOR TÍTULO + MARIPOSAS */
+.titulo-con-mariposas{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+}
+
+/* MARIPOSAS */
+.mariposa{
+    width:150px;
+    height:auto;
+}
+
+/* AJUSTE EN MÓVIL */
+@media (max-width:600px){
+    .mariposa{
+        width:45px;
+    }
+
+    .titulo{
+        font-size:3.2rem;
+    }
+}
+.rosa-final{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:transparent;
+    border:none;
+    box-shadow:none;
+}
+
+.rosa-img{
+    max-width:120px;
+    opacity:0.9;
+    animation: flotarRosa 6s ease-in-out infinite;
+}
+
